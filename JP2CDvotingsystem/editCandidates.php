@@ -8,6 +8,7 @@ if(!isset($_SESSION["admin_id"]) && !isset($_SESSION["password"])){
 		exit();
 	}	
 ?>
+
 <?php 
 		if(!isset($_GET['id'])){
 			header("location: candidates.php");
