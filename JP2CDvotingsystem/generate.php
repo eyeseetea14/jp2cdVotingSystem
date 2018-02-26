@@ -32,7 +32,7 @@ if(!isset($_SESSION["admin_id"]) && !isset($_SESSION["password"])){
 $message2 = "";
 if(isset($_POST["submit"])){
 	function generate(){
-		 	$characters='0123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKMNOPQRSTUVWXYZ';
+		 	$characters='0123456789';
 			$pass_characters = str_split($characters);
 			$pass_length = "6";
 			$password='';
