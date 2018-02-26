@@ -1,5 +1,5 @@
 $(function(){
-		console.log("Im in here");
+
 		$('#search').keyup(function(event){
 				var keyCode = event.which; // check which key was pressed
 				var name = $(this).val(); // get the complete input
