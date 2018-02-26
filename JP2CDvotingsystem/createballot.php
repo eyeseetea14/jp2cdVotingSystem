@@ -227,7 +227,7 @@ if(isset($_POST["submit"])){
 			<p>(only 6 candidates can be elected.)</p>
 			<h4>Candidates</h4>
 			<?php
-				for($i=1; $i < 2; $i++){
+				for($i=1; $i < 11; $i++){
 					echo "<h4>".$i.'.'."</h4>";
 					include 'inputs.php';
 					echo "<br>";
