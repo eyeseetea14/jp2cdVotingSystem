@@ -23,7 +23,7 @@ if(!isset($_SESSION["admin_id"]) && !isset($_SESSION["password"])){
 	$sql = "SELECT * FROM candidates ORDER BY id_number ASC";
 	$query = mysqli_query($con,$sql);
 	$rowCount = mysqli_num_rows($query); 
-	if($rowCount > 7){
+	if($rowCount > 1){
 		while($row = mysqli_fetch_array($query)){
 			$idnum = $row["id_number"];
 			$name = strtoupper($row["lastname"]).', '. ucwords($row["firstname"].' '.$row["mi"].',');
