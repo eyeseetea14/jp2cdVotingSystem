@@ -7,12 +7,6 @@ if(!isset($_SESSION["admin_id"]) && !isset($_SESSION["password"])){
 		exit();
 	}
 
-	$sql = "SELECT * FROM candidates";
-	$query = mysqli_query($con,$sql);
-	$rowCount = mysqli_num_rows($query);
-	if($rowCount > 8){
-		header("location:ballotCreated.php");
-	}
 
 	
 function clean($data){
@@ -227,7 +221,7 @@ if(isset($_POST["submit"])){
 			<p>(only 6 candidates can be elected.)</p>
 			<h4>Candidates</h4>
 			<?php
-				for($i=1; $i < 11; $i++){
+				for($i=1; $i = 0 ; $i++){
 					echo "<h4>".$i.'.'."</h4>";
 					include 'inputs.php';
 					echo "<br>";
@@ -345,7 +339,7 @@ $(document).ready(function (){
  
     
     $('.add').on('click',function(){
-        $('<div class="cc"><input type="text" name="idnum[]" class="code" placeholder="ID number" maxlength="6"><input type="text" name="firstname[]" placeholder="First Name"><input type="text" name="middleinitial[]" placeholder="Middle Initial" maxlength="1"><input type="text" name="lastname[]" placeholder="Last Name"><select name="course[]"><option selected="selected" disabled value="">Course</option><option value="BA">BA</option><option value="CRIM">CRIM</option><option value="CHM">CHM</option><option value="EDUC">EDUC</option><option value="ENGINEERING">ENGINEERING</option><option value="ICT">ICT</option><option value="NURSING">NURSING</option></select><select name="year[]"><option selected="selected" disabled value="">Year</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select><input type="text" name="partylist[]" placeholder="Partylist"><input type="text" name="position[]" value="Councilor"><button type="button" class="remove"><i class="fa fa-times fa-1x"></i>Remove</button><br></div>').appendTo('.Councilors');
+        $('<div class="cc"><input type="text" name="idnum[]" class="code" placeholder="ID number" maxlength="7"><input type="text" name="firstname[]" placeholder="First Name"><input type="text" name="middleinitial[]" placeholder="Middle Initial" maxlength="1"><input type="text" name="lastname[]" placeholder="Last Name"><select name="course[]"><option selected="selected" disabled value="">Course</option><option value="BA">BA</option><option value="CRIM">CRIM</option><option value="CHM">CHM</option><option value="EDUC">EDUC</option><option value="ENGINEERING">ENGINEERING</option><option value="ICT">ICT</option><option value="NURSING">NURSING</option></select><select name="year[]"><option selected="selected" disabled value="">Year</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select><input type="text" name="partylist[]" placeholder="Partylist"><input type="text" name="position[]" value="Councilor"><input type="file" name="photo[]" /><button type="button" class="remove"><i class="fa fa-times fa-1x"></i>Remove</button><br></div>').appendTo('.Councilors');
     });
     
     $(document).on('click','.remove', function (){

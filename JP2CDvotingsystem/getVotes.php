@@ -11,7 +11,7 @@
 		for($i =0; $i < 10; $i++){
 			
 			if(empty($Councilor[$i])){
-				$Councilor[$i] = "abstain";
+				$Councilor[$i] = "";
 			}
 		}
 		

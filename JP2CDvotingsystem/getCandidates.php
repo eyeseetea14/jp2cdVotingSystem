@@ -112,7 +112,7 @@
 		$query = "SELECT * FROM candidates WHERE position='Councilor' ORDER BY RAND()";
 		$sql = mysqli_query($con,$query);
 		$count = mysqli_num_rows($sql);
-		if($count > 1){
+		if($count >= 1){
 			while($rows = mysqli_fetch_array($sql)){
 				$id_number = $rows["id_number"];
 				$firstname = ucfirst($rows["firstname"]);

@@ -103,7 +103,7 @@ if(!isset($_SESSION["admin_id"]) && !isset($_SESSION["password"])){
 	$query = mysqli_query($con,$sql);
 	$numRows = mysqli_num_rows($query);
 	if($numRows > 0){
-		$createBallot = '<a href="">
+		$createBallot = '<a href="createballot.php">
 							<div class="box boxa"> 
 								<i class="fa fa-home fa-pencil-square-o fa-4x"></i>
 								<p>Create Ballot</p>
