@@ -1,4 +1,4 @@
-<?php 
+<?php
 	ob_start();
 	session_start();
 	require 'connect_database.php';
@@ -35,8 +35,8 @@
 			}
 		}else {
 			$errorMatch = "ID number and password do not match";
-		}	
-		}	
+		}
+		}
 	}
 
 ?>
@@ -53,27 +53,27 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="style.css" media="screen" />	
+<link rel="stylesheet" href="style.css" media="screen" />
 <link rel="stylesheet" href="normalize.css" />
-<link rel="Stylesheet" href="Font-awesome/font-awesome-4.3.0/css/font-awesome.css" />	
+<link rel="Stylesheet" href="Font-awesome/font-awesome-4.3.0/css/font-awesome.css" />
 <script src="js/jquery-1.11.2.js"></script>
-</head>	                      
-<body id="index3">	
-		<div class="nav-bar"><img src="images/SSC_Final.png" width="70" height="70"/><p>SSC ELECTION <?php echo date("Y"); ?></p></div>
+</head>
+<body id="index3">
+		<div class="nav-bar"><img class="img-1" src="images/comelec_logo.png" width="70" height="70"/><img class="img-2" src="images/ssc_logo.png" width="70" height="70"/><p>SSC ELECTION <?php echo date("Y"); ?></p></div>
 <form class="loginfrm" name="loginfrm" method="POST" action="index.php" onsubmit="return validation();">
 	<input type="text" id="idnum" name="idnum" class="code" maxlength="8" placeholder="ID number ex.20140000" autocomplete="off" /><br>
 	<input type="password" id="password" name="password" maxlength="6" placeholder="Password" autocomplete="off"/><br>
 	<button type="submit" name="submit" value="submit"><i class="fa fa-sign-in fa-2x"></i><span>ENTER</span></button>
 	<span class="errorMessage"><?php echo $errorMatch; ?></span>
 	<img class="jp2cdlogo" src="images/222.png" width="130" height="130" >
-</form>		
+</form>
 </body>
 </html>
 <script>
 function validation(){
 	var idnum = document.getElementById("idnum");
 	var password = document.getElementById("password");
-	
+
 	if(idnum.value == ""){
 		idnum.focus();
 		alert("Please fill ID number");
@@ -95,7 +95,7 @@ function validation(){
 	}
 
 return true;
-	
+
 }
 $(document).ready(function() {
     $(document).delegate(".code","keydown",function(e) {
@@ -124,5 +124,3 @@ $(document).ready(function() {
 
 });
 </script>
-
-

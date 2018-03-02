@@ -13,12 +13,11 @@
 				$lastname = ucfirst($rows["lastname"]);
 				$mi = ucfirst($rows["mi"]);
 				$course = ucfirst($rows["course"]);
-				$partylist = ucfirst($rows["partylist"]); 
+				$partylist = ucfirst($rows["partylist"]);
 				$position = ucfirst($rows["position"]);
 				$candidatePresident .= '<tr>
-								
-  			  					<td class="candidate"><img src="images/'.$id_number.'.jpg" width="120" height="120">&nbsp&nbsp&nbsp'.$firstname.' '.$mi.'. '.$lastname.'<br>&nbsp<span class="partylist">('.$partylist.')</td>
-     		  					<td class="radio"><input type="radio" name="'.$position.'" value="'									.$id_number.'"></td>
+  			  					<td class="candidate"><img class="img-can" src="images/'.$id_number.'.jpg" width="120" height="120"><h4 class="text-default">Name: <b>'.$firstname.' '.$mi.'. '.$lastname.'</b>&nbsp<span class="partylist">Course: <b>'.$course.'</b><span class="partylist">Partylist: <b>('.$partylist.')</b></h4></td>
+     		  					<td class=" pull-right"><input class="radio-can" type="radio" name="'.$position.'" value="'									.$id_number.'"></td>
  								 </tr>';
 			}
 		}
@@ -41,11 +40,11 @@
 				$lastname = ucfirst($rows["lastname"]);
 				$mi = ucfirst($rows["mi"]);
 				$course = ucfirst($rows["course"]);
-				$partylist = ucfirst($rows["partylist"]); 
+				$partylist = ucfirst($rows["partylist"]);
 				$position = ucfirst($rows["position"]);
 				$candidateVPi .= '<tr>
-  			  					<td class="candidate"><img src="images/'.$id_number.'.jpg" width="120" height="120">&nbsp&nbsp&nbsp'.$firstname.' '.$mi.'. '.$lastname.'<br>&nbsp<span class="partylist">('.$partylist.')</span></td>
-     		  					<td class="radio"><input type="radio" name="'.$position.'" value="'									.$id_number.'"></td>
+  			  					<td class="candidate"><img class="img-can" src="images/'.$id_number.'.jpg" width="120" height="120"><h4 class="text-default">Name: <b>'.$firstname.' '.$mi.'. '.$lastname.'</b>&nbsp<span class="partylist">Course: <b>'.$course.'</b><span class="partylist">Partylist: <b>('.$partylist.')</b></h4></td>
+     		  					<td class=" pull-right"><input class="radio-can" type="radio" name="'.$position.'" value="'									.$id_number.'"></td>
  								 </tr>';
 			}
 		}
@@ -68,11 +67,11 @@
 				$lastname = ucfirst($rows["lastname"]);
 				$mi = ucfirst($rows["mi"]);
 				$course = ucfirst($rows["course"]);
-				$partylist = ucfirst($rows["partylist"]); 
-				$position = ucfirst($rows["position"]);	
+				$partylist = ucfirst($rows["partylist"]);
+				$position = ucfirst($rows["position"]);
 				$candidateVPe .= '<tr>
-  			  					<td class="candidate"><img src="images/'.$id_number.'.jpg" width="120" height="120">&nbsp&nbsp&nbsp'.$firstname.' '.$mi.'. '.$lastname.'<br>&nbsp<span class="partylist">('.$partylist.')</span></td>
-     		  					<td class="radio"><input type="radio" name="'.$position.'" value="'									.$id_number.'"></td>
+  			  					<td class="candidate"><img class="img-can" src="images/'.$id_number.'.jpg" width="120" height="120"><h4 class="text-default">Name: <b>'.$firstname.' '.$mi.'. '.$lastname.'</b>&nbsp<span class="partylist">Course: <b>'.$course.'</b><span class="partylist">Partylist: <b>('.$partylist.')</b></h4></td>
+     		  					<td class=" pull-right"><input class="radio-can" type="radio" name="'.$position.'" value="'									.$id_number.'"></td>
  								 </tr>';
 			}
 		}
@@ -95,11 +94,11 @@
 				$lastname = ucfirst($rows["lastname"]);
 				$mi = ucfirst($rows["mi"]);
 				$course = ucfirst($rows["course"]);
-				$partylist = ucfirst($rows["partylist"]); 
-				$position = ucfirst($rows["position"]);	
+				$partylist = ucfirst($rows["partylist"]);
+				$position = ucfirst($rows["position"]);
 				$candidateVPf .= '<tr>
-  			  					<td class="candidate"><img src="images/'.$id_number.'.jpg" width="120" height="120">&nbsp&nbsp&nbsp'.$firstname.' '.$mi.'. '.$lastname.'<br>&nbsp<span class="partylist">('.$partylist.')</span></td>
-     		  					<td class="radio"><input type="radio" name="'.$position.'" value="'									.$id_number.'"></td>
+  			  					<td class="candidate"><img class="img-can" src="images/'.$id_number.'.jpg" width="120" height="120"><h4 class="text-default">Name: <b>'.$firstname.' '.$mi.'. '.$lastname.'</b>&nbsp<span class="partylist">Course: <b>'.$course.'</b><span class="partylist">Partylist: <b>('.$partylist.')</b></h4></td>
+     		  					<td class=" pull-right"><input class="radio-can" type="radio" name="'.$position.'" value="'									.$id_number.'"></td>
  								 </tr>';
 			}
 		}
@@ -107,7 +106,7 @@
 
 
 ?>
-<?php 
+<?php
 	$candidateCouncilors = "";
 	if(isset($_SESSION["student_id"])){
 		$query = "SELECT * FROM candidates WHERE position='Councilor' ORDER BY RAND()";
@@ -120,15 +119,14 @@
 				$lastname = ucfirst($rows["lastname"]);
 				$mi = ucfirst($rows["mi"]);
 				$course = ucfirst($rows["course"]);
-				$partylist = ucfirst($rows["partylist"]); 
-				$position = $rows["position"];	
+				$partylist = ucfirst($rows["partylist"]);
+				$position = $rows["position"];
 				$candidateCouncilors .= '<tr>
-  			  					<td class="candidate"><img src="images/'.$id_number.'.jpg" width="120" height="120">&nbsp&nbsp&nbsp'.$firstname.' '.$mi.'. '.$lastname.'<br>&nbsp<span class="partylist">('.$partylist.')</span></td>
-     		  					<td class="radio"><input type="checkbox" name="'.$position.'[]" value="'									.$id_number.'"></td>
-   										
- 										 </tr>';
+  			  					<td class="candidate"><img class="img-can" src="images/'.$id_number.'.jpg" width="120" height="120"><h4 class="text-default">Name: <b>'.$firstname.' '.$mi.'. '.$lastname.'</b>&nbsp<span class="partylist">Course: <b>'.$course.'</b><span class="partylist">Partylist: <b>('.$partylist.')</b></h4></td>
+     		  					<td class=" pull-right"><input class="radio-conc" type="checkbox" name="'.$position.'" value="'									.$id_number.'"></td>
+ 								 </tr>';
 			}
 		}
 	}
-	
+
 ?>

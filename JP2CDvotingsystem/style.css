@@ -1,4 +1,4 @@
-body {   
+body {
 	padding: 0;
 	margin: 0;
 	background:#e5e5e0;
@@ -9,13 +9,18 @@ body {
 	background:#fff;
 }
 #index3 {
-	background:url("images/test.jpg")no-repeat;
-	background-size: cover;
+	background:url("images/test.png")no-repeat;
+	background-size: auto;
 	margin:0;
 	padding:0;
 }
 .vote-page {
-	background:#e5e5e0;
+	background:url("images/test.png")no-repeat;
+	background-size: auto;
+	background-attachment: fixed;
+	margin:0;
+	padding:0;
+
 }
 * {
 	margin:0;
@@ -24,46 +29,52 @@ body {
 @font-face {
   font-family: 'Lato-Black';
   src: url('fonts/Lato-Black.ttf') format('truetype')
-        
+
 }
 @font-face {
   font-family: 'Lato-Regular';
   src: url('fonts/Lato-Regular.ttf') format('truetype')
-        
+
 }
 @font-face {
   font-family: 'Lato-BoldItalic';
   src: url('fonts/Lato-BlackItalic.ttf') format('truetype')
-      
+
 }
 @font-face {
   font-family: 'Lato-Bold';
   src: url('fonts/Lato-Bold.ttf') format('truetype')
-      
+
 }
 @font-face {
   font-family: 'Lato-Hairline';
   src: url('fonts/Lato-Hairline.ttf') format('truetype')
-        
+
 }
 @font-face {
   font-family: 'Lato-Semibold';
   src: url('fonts/Lato-Semibold.ttf') format('truetype')
-        
+
 }
 @font-face {
   font-family: 'Lato-Light';
   src: url('fonts/Lato-Light.ttf') format('truetype')
-        
+
 }
 /*---------INDEX PAGE 2------------*/
 .nav-bar p {
 	margin-top: 10px;
 	margin-left: 90px;
 }
-.nav-bar img {
+.nav-bar .img-1 {
 	position:absolute;
 	top:2px;
+	z-index:999;
+}
+.nav-bar .img-2 {
+	position:absolute;
+	top:2px;
+	left: 90px;
 	z-index:999;
 }
 
@@ -74,6 +85,7 @@ img.jp2cdlogo {
 	left:-20px;
 	margin-left: auto;
 	margin-right: auto;
+
 }
 
 .nav-bar {
@@ -85,6 +97,8 @@ img.jp2cdlogo {
 .nav-bar p{
 	font-family:'Lato-Black';
 	color:#fff;
+	position:absolute;
+	left: 80px;
 }
 
 a {
@@ -100,16 +114,19 @@ a {
 .main-header {
 	font-family:'Lato-Light';
 }
+
 .loginfrm {
+	position: relative;
+	left: 400px;
 	padding-top:5em;
 	padding-left:2em;
 	margin: 2em auto 0 auto;
-	border-radius: 3px;
-	width: 16em;
-	height: 21em;
-	background: #2b82c9;
+	border-radius: 5px;
+	width: 21em;
+	height: 26em;
+	background: #0073ad;
 	overflow:hidden;
-
+	box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.7), 0 10px 24px 0 rgba(0, 0, 0, 0.30);
 }
 .loginfrm input[type="text"],input[type="password"]{
 	letter-spacing: 1.2px;
@@ -128,43 +145,55 @@ a {
 .loginfrm:after {
 	content:"Login";
 	color:#fff;
+	font-weight: bold;
 	font-family:'Lato-Light';
 	position:relative;
-	top: -370px;
+	top: -372px;
 	left:-33px;
-	background:#2a69b0;
+	background:#00477e;
 	display:block;
-	width: 18.5em;
+	width: 23.5em;
 	height: 3.2em;
 	text-align: center;
 	padding-top: 10px;
 	z-index:1 ;
 }
 .loginfrm input {
+	position: relative;
+	left: 25px;
 	color: #505458;
-	margin-left: 5px;
+	margin-left: 10px;
 	margin-top:8px;
 	font-family:'Lato-Black';
-	padding: 8px;
-	width: 12.5em;
+	padding: 10px;
+	width: 14.5em;
 	border: none;
 	margin-left: auto;
 	margin-right: auto;
 }
 #idnum {
-	border-radius: 3px 3px 0 0;
+	border-radius: 3px 3px 3px 3px;
+}
+#password {
+	border-radius: 3px 3px 3px 3px;
 }
 .loginfrm button {
 	font-family:'Lato-Black';
 	color:#fff;
 	margin-top:20px;
 	border:none;
-	width: 13.5em;
+	width: 14.5em;
 	height: 3em;
-	background:#2a69b0;
+	background:#00477e;
 	overflow:hidden;
 	transition: .3s all ease;
-	border-radius: 0 0 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	position: relative;
+	left: 35px;
+
+}
+.loginfrm button:hover{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .loginfrm button span{
 	display:inline-block;
@@ -190,9 +219,38 @@ a {
 }
 /*----------------Voting PAGE-------------------*/
 
+.nav-bar-vote p {
+	margin-top: 10px;
+	margin-left: 90px;
+}
+.nav-bar-vote .img-1 {
+	position:absolute;
+	top:2px;
+	z-index:999;
+}
+.nav-bar-vote .img-2 {
+	position:absolute;
+	top:2px;
+	left: 90px;
+	z-index:999;
+}
+
+.nav-bar-vote {
+	padding: 15px;
+	display:block;
+	height: 60px;
+	background:#363636;
+}
+.nav-bar-vote p{
+	font-family:'Lato-Black';
+	color:#fff;
+	position:absolute;
+	left: 80px;
+}
+
 input[type="radio"], input[type="checkbox"]{
-	transform:scale(1.4);
-	border;none;
+	transform:scale(3.5);
+	border:none;
 }
 .vote-form {
 	padding: 2em 0 2em 0 ;
@@ -200,15 +258,15 @@ input[type="radio"], input[type="checkbox"]{
 	margin-top: 2em;
 	margin-bottom: 2em;
 	margin-left: auto;
-	width: 50em;
+	width: 60em;
 	height: auto;
-	background: #fff;
+	background: black;
 }
 .submit-btn {
 	width: 10em ;
 	height: 3em;
 	font-family: 'Lato-Regular';
-	background:#2a80b9;	
+	background:#2a80b9;
 	border:none;
 	font-size: 17px;
 	margin-top: 2em;
@@ -243,16 +301,18 @@ input[type="radio"], input[type="checkbox"]{
 	transition: .3s all ease;
 }
 
-.voteTable {  
+.candidate{
+}
+.voteTable {
 	font-family:'Lato-Regular';
 	width: 90%;
 	border-spacing:0;
 	margin-left:auto;
 	margin-right:auto;
 }
+
 .voteTable td h3 {
 	color:#fff;
-
 }
 .voteTable .header {
 	color:#000;
@@ -260,6 +320,9 @@ input[type="radio"], input[type="checkbox"]{
 	background:#4374e0;
 	border-spacing:0;
 	width: 60%;
+}
+.voteTable .header h4{
+	color:white;
 }
 
 .voteTable .header td {
@@ -270,7 +333,10 @@ input[type="radio"], input[type="checkbox"]{
 }
 .voteTable td {
 	padding:20px;
-	width: 30%;
+	width: 50%;
+}
+.img-can {
+	box-shadow: 4px 4px 15px grey;
 }
 .voteTable td span {
 	letter-spacing: 0.5px;
@@ -278,12 +344,24 @@ input[type="radio"], input[type="checkbox"]{
 .voteTable tr {
 	background:#dce1ed;
 }
-.candidate {
-	
+.candidate{
 }
 .radio {
 	padding-left: 30px;
 }
+.radio-can {
+	position: relative;
+	top: 50px;
+}
+.radio-abs {
+	position: relative;
+	top: 20px;
+}
+.radio-conc {
+	position: relative;
+	top: 55px;
+}
+
 /*--------------------------ADMIN login PAGE-----------------*/
 
 h4 {
@@ -395,7 +473,7 @@ h4 {
 	display:block;
 }
 .left-bar li {
-	display:block;	
+	display:block;
 	padding-top: 10px ;
 	height: 30px;
 	margin-top: 8px;
@@ -410,7 +488,7 @@ h4 {
 	letter-spacing: 1px;
 	font-family:'Lato-Black';
 	color:#fff;
-	
+
 }
 .left-bar li:hover  {
 	cursor:pointer;
@@ -628,7 +706,7 @@ ol {
 .main-content .create:hover span{
 	left:150px;
 	transition: .3s all ease;
-	
+
 }
 .main-content .create:hover {
 	cursor:pointer;
@@ -698,7 +776,7 @@ fieldset {
 	width: 90%;
 	height: 120px;
 	padding: 30px;
-	margin-bottom: 20px; 
+	margin-bottom: 20px;
 }
 .editCandidates input[type="text"],.editCandidates select {
 	background:#e4e6e5;
