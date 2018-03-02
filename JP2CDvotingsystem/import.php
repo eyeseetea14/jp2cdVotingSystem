@@ -38,7 +38,7 @@ if(!isset($_SESSION["admin_id"]) && !isset($_SESSION["password"])){
 						$handle = fopen($tmp_name_array[$i],"r");
 						do {
 							if(isset($data[0])){
-					 		$import = mysqli_query($con,"INSERT INTO students (last_name, first_name, ID_number, course, year) VALUES('".addslashes($data[0])."','".addslashes($data[1])."','".addslashes($data[2])."','".addslashes($data[3])."','".addslashes($data[4])."')"); 
+					 		$import = mysqli_query($con,"INSERT INTO students (last_name, first_name, ID_number, course, year,passcode,vote) VALUES('".addslashes($data[0])."','".addslashes($data[1])."','".addslashes($data[2])."','".addslashes($data[3])."','".addslashes($data[4])."','','')"); 
 							}else {
 								$message = "<h4><span style=\"color:#ee483b;\">Import Successful</span></h4><br>";	
 										
